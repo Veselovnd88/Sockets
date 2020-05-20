@@ -1,0 +1,7 @@
+import socket
+
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) # создание сокета
+sock.bind(('127.0.0.1', 8888)) # указание хоста и порта, передается в кортеже
+sock. listen() # прослушивание сокета на входящие соединения
+conn, addr = sock.accept()
+print('Соединение подключено ', conn)
